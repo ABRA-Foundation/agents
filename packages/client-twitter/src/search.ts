@@ -135,6 +135,7 @@ export class TwitterSearchClient {
     - Respond to tweets that don't have a lot of hashtags, links, URLs or images
     - Respond to tweets that are not retweets
     - Respond to tweets where there is an easy exchange of ideas to have with the user
+    - DO NOT respond to tweets that are not relevant to Web3, Crypto & AI
     - ONLY respond with the ID of the tweet`;
 
             const mostInterestingTweetResponse = await generateText({

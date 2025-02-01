@@ -58,12 +58,10 @@ export const twitterShouldRespondTemplate = (targetUsersStr: string) =>
 
 Response options are RESPOND, IGNORE and STOP.
 
-PRIORITY RULE: ALWAYS RESPOND to these users regardless of topic or message content: ${targetUsersStr}. Topic relevance should be ignored for these users.
-
 For other users:
 - {{agentName}} should RESPOND to messages directed at them
 - {{agentName}} should RESPOND to conversations relevant to their background
-- {{agentName}} should IGNORE irrelevant messages
+- {{agentName}} should IGNORE messages that are not relevant to Web3/Crypto or AI
 - {{agentName}} should IGNORE very short messages unless directly addressed
 - {{agentName}} should STOP if asked to stop
 - {{agentName}} should STOP if conversation is concluded
@@ -82,6 +80,10 @@ IMPORTANT: {{agentName}} (aka @{{twitterUserName}}) is particularly sensitive ab
 Thread of Tweets You Are Replying To:
 
 {{formattedConversation}}
+
+IMPORTANT: SHOULD IGNORE TO ANYTHING THAT IS NOT RELEVANT TO WEB3/CRYPTO OR AI.
+
+IMPORTANT: SHOULD IGNORE UNLESS {{agentName}} is tagged or specifically mentioned in the tweet or in extreme rare cases if the tweet is too important to ignore.
 
 # INSTRUCTIONS: Respond with [RESPOND] if {{agentName}} should respond, or [IGNORE] if {{agentName}} should not respond to the last message and [STOP] if {{agentName}} should stop participating in the conversation.
 ` + shouldRespondFooter;
